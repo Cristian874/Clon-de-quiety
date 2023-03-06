@@ -1,0 +1,111 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer{
+    margin-top: v.$top;
+
+    &__grid{
+        @include m.tablet { 
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 5rem;        
+         }
+
+         
+    }
+
+
+    &__card{
+        text-align: center;
+        margin-bottom: 5rem;
+        @include m.tablet { 
+            text-align: left;
+            margin-bottom: 0;
+            
+         }
+    }
+
+    &__card--principal{
+        grid-column: 1 / 3;
+
+        @include m.tablet { 
+            width: 90%;
+         }
+    }
+    &__formulario{
+        display: flex;
+        gap: 2rem;
+      
+    }
+    &__logo{
+        font-size: 3rem;
+    }
+    &__txt{
+        font-size: 1.8rem;
+    }
+    &__input{
+        width: 100%;
+        border: .1px solid v.$color__link;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    &__title{
+        color: v.$negro;
+        font-weight: 600;
+    }
+
+    &__link{
+        font-size: 1.5rem;
+        color: v.$color__link;
+        margin-bottom: 2rem;
+    }
+
+    &__redes{
+        text-align: center;
+        margin-top: 5rem;
+        border-top: 1px solid #5757573d;
+        padding: 2rem 0;
+        @include m.tablet {
+            text-align: left; 
+            
+         }
+    }
+
+    &__flex{
+        @include m.tablet { 
+            display: flex;
+        justify-content: space-between;
+        align-items: center;
+            
+        }
+        
+    }
+    &__imagen{
+        gap: 2rem;
+        border: 1px solid v.$color__link;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 1rem;
+        margin: 0 auto;
+        @include m.tablet {
+            margin: unset; 
+            
+         }
+    }
+
+    &__img{
+        width: 2rem;
+      height: 2rem;
+      gap: 2rem;
+     
+      margin: 0 auto;
+    }
+
+    &__iconos{
+     
+        display: flex;
+        gap: 2rem;
+   
+    
+    }
+}

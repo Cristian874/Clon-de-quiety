@@ -1,0 +1,44 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.company{
+    margin-top: v.$top;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    @include m.tablet { 
+        height: 120rem;
+        
+     }
+   
+
+
+    &__informacion{
+        padding:  2rem ;
+      @include m.tablet { 
+        padding: 10rem 5rem;
+        
+       }
+        @include m.desktop { 
+            padding: 10rem 5rem;
+            max-width: 50%;
+         }
+    }
+
+    &__heading{
+        font-size: 5rem;
+        color: v.$blanco;
+    }
+    &__txt{
+        color: v.$blanco;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    &__number{
+        color: v.$boton_uno;
+        font-size: 3rem;
+    }
+}

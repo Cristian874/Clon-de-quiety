@@ -1,0 +1,138 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.pricing{
+    margin-top: v.$top;
+
+    &__title{
+        text-align: center;
+        font-size: 2rem;
+        color: v.$boton_uno;
+    }
+
+    &__heading{
+        text-align: center;
+        font-size: 5rem;
+    }
+    &__txt{
+
+        text-align: center;
+        @include m.tablet { 
+            max-width: 70%;
+            margin: 0 auto;
+            
+         }
+    }
+
+    &__flex{
+        @include m.tablet { 
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            align-items:center;
+         }
+      
+    }
+    &__informacion{
+        margin-bottom:2rem;
+        display: flex;
+          gap: 1rem;
+        align-items: center;
+        justify-content: center;
+ 
+       @include m.tablet { 
+        margin-bottom:0;
+        
+        }
+  
+    }
+    &__svg{
+        margin: 0 auto;
+        background-color: v.$icono_uno;
+        width:10%;
+        height: 40%;
+        border-radius: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    &__title--negro{
+        color: v.$negro;
+        font-weight: 600;
+    }
+
+    &__grid{
+        margin-top: 9rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 2rem; 
+            
+         }
+    }
+
+
+    &__card{
+        margin-bottom: 5rem;
+        box-shadow: 0 0 10px 10px rgba( 0 0 0 /.10);
+     padding: 5rem ;
+     text-align: center;
+     border-radius: 3%;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    @include m.tablet { 
+        
+        margin-bottom: 0;
+        
+     }
+    
+    }
+
+    &__card--azul{
+        background-image: v.$degradado_card;
+        color: v.$blanco;
+    }
+
+    &__title--dorado{
+        color: orange;
+    }
+    &__numero{
+        font-size: 4rem;
+        font-weight: 700;
+        padding: 3rem 0;
+  
+    }
+    &__span{
+        font-weight: 400;
+        font-size: 2rem;
+        
+    }
+    &__border{
+        border: .1rem dotted #c1c1c1;
+        width: 100%;
+        margin-bottom: 4rem ;
+    }
+    &__link{
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+        text-align: left;
+        font-weight: 400;
+       
+    }
+
+    &__link::marker{
+        color: v.$boton_uno;
+        font-size: 3rem;
+        
+    }
+    &__link--dorado::marker{
+        color: orange;
+    }
+
+    &__boton{
+    
+        margin-top: 3rem;
+    }
+}

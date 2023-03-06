@@ -1,0 +1,8 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.barra{
+    background: v.$degradado;
+    height: 20rem;
+    margin-top: -7rem;
+}

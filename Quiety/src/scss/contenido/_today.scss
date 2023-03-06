@@ -1,0 +1,151 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.today{
+    margin-top: v.$top;
+
+    &__grid{
+        @include m.tablet {
+         
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 5rem; 
+            
+         }
+    }
+
+    &__contenido{
+        @include m.desktop {
+            max-width: 80%; 
+            padding: 0  0 0 5rem;
+            
+         }
+    }
+    &__title{
+        color: v.$boton_uno;
+        font-weight: 600;
+    }
+    &__heading{
+        margin: 0 ;
+        font-size: 5rem;
+    }
+
+    &__flex{
+        display: flex;
+    }
+
+    &__img{
+        width: 5rem;
+        background-color: v.$boton_uno;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+    &__img--red{
+        background-color: v.$boton_dos;
+
+
+
+    }
+
+    &__iconos{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    &__icono{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__number{
+        font-weight: 600;
+        color: v.$boton_uno;
+    }
+
+    &__formulario{
+        
+        padding: 2rem;
+        background-color: v.$blanco;
+        box-shadow: 0 0 1px 2px rgba( 0 0 0 / 15%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2%;
+        z-index: 1;
+        @include m.desktop {
+            max-width: 80%; 
+            
+         }
+    }
+
+    &__titular{
+        font-size: 3.5rem;
+    }
+    &__campos{
+  
+        width: 100%;
+        @include m.desktop {
+            display: flex;
+            gap: 2rem; 
+            
+         }
+    
+    }
+    &__campo{
+      
+        width: 100%; 
+            
+       
+    }
+
+    &__input{
+     
+        padding: 2rem .5rem;
+        width:20rem;
+        margin-bottom: 2rem;
+        outline: none;
+    font-size: 1.5rem;
+
+        width: 100%;
+        
+    
+   
+    }
+    &__mensaje{
+        width: 100%;
+    }
+
+    &__message{
+        font-size: 1.5rem;
+        outline: none;
+        
+       
+      height: 20rem;
+      padding:  2rem;
+      width:100%;
+
+    
+    }
+
+    &__revisar{
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    &__revision{
+        font-size: 1.2rem;
+    }
+
+    &__submit{
+        width: 100%;
+    }
+    &__boton{
+        width: 100%;
+
+      
+   
+    }
+}

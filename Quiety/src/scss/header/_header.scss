@@ -1,0 +1,118 @@
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.hero{
+    padding-top: 10rem;
+    background-image: v.$degradado;
+    color: v.$blanco;
+   
+
+    @include m.desktop { 
+        height: 100rem;
+        padding-top: 20rem;
+     }
+    
+
+    &__grid{
+
+        @include m.tablet { 
+            
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2rem;
+            align-items: center;
+            
+         }
+      
+    }
+
+    &__heading{
+        font-size: 5rem;
+        line-height: 1.5;
+    }
+
+    &__txt{
+        color: v.$blanco;
+        padding: 1rem 0 2rem 0;
+        font-size: 2rem;
+        line-height: 2;
+    }
+
+    &__botones{
+
+        @include m.tablet { 
+            display: flex;
+            gap: 3rem;
+            
+         }
+      
+    }
+
+    &__boton--red{
+        margin-bottom: 2rem;
+        background-color: v.$boton_dos;
+       @include m.tablet {
+        margin-bottom: 0; 
+        
+        }
+    }
+
+    &__boton--fondo{
+        background-color: unset;
+    }
+
+    &__footer{
+        font-size: 2rem;
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 10rem;
+            
+         }
+ 
+    }
+
+    &__iconos{
+    
+        @include m.tablet { 
+            display: flex;
+            gap: 5rem;
+            
+         }
+  
+        
+    }
+
+    &__icono{
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: #b1a5a51a;
+        display: flex;
+        gap: 1rem;
+         align-items: center;
+         justify-content: center;
+
+         @include m.tablet { 
+            margin-bottom: 0;
+            
+          }
+    }
+    &__vector{
+        width: 3rem;
+    }
+
+    &__title{
+        font-size: 1.5rem;
+        color: v.$blanco;
+    }
+
+    &__img{
+        margin-top: 5rem;
+        @include m.tablet { 
+            
+        margin-top: 0;
+            
+         }
+    }
+}

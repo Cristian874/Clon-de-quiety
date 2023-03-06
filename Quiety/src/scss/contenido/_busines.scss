@@ -1,0 +1,108 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.busines{
+    margin-top: v.$top;
+
+
+    &__grid{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+         gap: 2rem;
+         align-items: center;
+            
+        }
+    }
+
+    &__icono--rojo{
+        width: 7rem;
+        border-radius:2rem;
+        padding: 1rem;
+        background-color: v.$boton_dos;
+    }
+    &__icono--azul{
+        width: 7rem;
+        border-radius:2rem;
+        padding: 1rem;
+        background-color: v.$boton_uno;
+    }
+    &__heading{
+        font-size: 5rem;
+    }
+
+    &__informacion{
+        text-align: center;
+     
+        gap: 2rem;
+        align-items: center;
+        margin-top: 5rem;
+        @include m.tablet { 
+            display: flex;
+            text-align: left;
+            
+         }
+    }
+
+ 
+    
+    &__vector{
+      
+        width: 5rem;
+        height: 5rem;
+       
+    }
+    &__icono{
+        width: 3rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        @include m.tablet {
+            margin-bottom: 0; 
+            
+         }
+    }
+
+    &__title{
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+    
+    }
+
+    &__txt{
+        text-align: center;
+        @include m.tablet {
+            text-align: left; 
+            
+         }
+    }
+    &__img{
+        height: 50rem;
+
+        @include m.tablet {
+            transform: rotate(5deg); 
+            
+         }
+
+    }
+
+    &__img--normal{
+        transform: unset; 
+        margin-bottom: 5rem;
+
+    }
+
+    &__flechas{
+        display:grid;
+    
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    &__contenedor{
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+}
